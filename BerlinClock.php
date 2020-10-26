@@ -11,11 +11,11 @@ class BerlinClock {
         if($int===4) return "[x][x][x][x]";
         if($int===3) return "[x][x][x][ ]";
         if($int===2) return "[x][x][ ][ ]";
-        if($int===1) return "[x][ ][ ][ ]";
+        if($int===1) return $string ."[x][ ][ ][ ]";
         return $string . "[ ][ ][ ][ ]";
     }
 
     public function count5Time(int $int) : String{
-        return "[X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]"."\n";
+        return "[x][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]"."\n";
     }
 }
