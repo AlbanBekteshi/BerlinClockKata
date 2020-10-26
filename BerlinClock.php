@@ -6,6 +6,7 @@ class BerlinClock {
         if($int===4) return "[x][x][x][x]";
         if($int===3) return "[x][x][x][ ]";
         if($int===2) return "[x][x][ ][ ]";
-        return "[x][ ][ ][ ]";
+        if($int===1) return "[x][ ][ ][ ]";
+        return "[ ][ ][ ][ ]";
     }
 }

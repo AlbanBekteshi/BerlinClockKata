@@ -18,6 +18,13 @@ class BerlinClockTest extends TestCase
         return $this->berlinClock->countTime($int);
     }
 
+    public function test_minute0_shouldReturn0(){
+
+        $actual = $this->actTime(0);
+
+        $this->assertEquals("[ ][ ][ ][ ]",$actual);
+    }
+
     public function test_minute1_shouldReturn1(){
 
         $actual = $this->actTime(1);
