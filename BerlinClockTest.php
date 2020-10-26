@@ -8,13 +8,21 @@ class BerlinClockTest extends TestCase
 {
     private $berlinClock;
 
-    public function test_minute1_shouldReturnOn(){
+    public function test_minute1_shouldReturn1(){
 
         $BerlinClock = new BerlinClock();
 
         $actual = $BerlinClock->countTime(1);
 
         $this->assertEquals("[x][ ][ ][ ]",$actual);
+    }
+    public function test_minute2_shouldReturn2(){
+
+        $BerlinClock = new BerlinClock();
+
+        $actual = $BerlinClock->countTime(2);
+
+        $this->assertEquals("[x][x][ ][ ]",$actual);
     }
 
     public function test_minute3_shouldReturnOn(){
@@ -24,4 +32,5 @@ class BerlinClockTest extends TestCase
 
         $this->assertEquals("[x][x][x][ ]",$actual);
     }
+
 }
