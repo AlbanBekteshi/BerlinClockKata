@@ -9,6 +9,17 @@ class BerlinClock {
     }
 
     public function countHour(int $int) : String{
+        $string  = $this->count5Hour($int/5);
+        $int = $int%5;
+
+        if($int===1) return $string ."[x][ ][ ][ ]\n";
+        if($int===2) return $string ."[x][x][ ][ ]\n";
+        if($int===3) return $string ."[x][x][x][ ]\n";
+        if($int===4) return $string ."[x][x][x][x]\n";
+        return $string ."[ ][ ][ ][ ]\n";
+    }
+
+    public function count5Hour(int $int) :String{
         if($int===1) return "[x][ ][ ][ ]\n";
         if($int===2) return "[x][x][ ][ ]\n";
         if($int===3) return "[x][x][x][ ]\n";
