@@ -23,15 +23,15 @@ class BerlinClock {
 
     public function count5Minute(int $int) : String{
         if($int===2) return "[x][x][ ][ ][ ][ ][ ][ ][ ][ ][ ]"."\n";
-        if($int===3) return "[x][x][x][ ][ ][ ][ ][ ][ ][ ][ ]"."\n";
-        if($int===4) return "[x][x][x][x][ ][ ][ ][ ][ ][ ][ ]"."\n";
-        if($int===5) return "[x][x][x][x][x][ ][ ][ ][ ][ ][ ]"."\n";
-        if($int===6) return "[x][x][x][x][x][x][ ][ ][ ][ ][ ]"."\n";
-        if($int===7) return "[x][x][x][x][x][x][x][ ][ ][ ][ ]"."\n";
-        if($int===8) return "[x][x][x][x][x][x][x][x][ ][ ][ ]"."\n";
-        if($int===9) return "[x][x][x][x][x][x][x][x][x][ ][ ]"."\n";
-        if($int===10) return "[x][x][x][x][x][x][x][x][x][x][ ]"."\n";
-        if($int===11) return "[x][x][x][x][x][x][x][x][x][x][x]"."\n";
+        if($int===3) return "[x][x][R][ ][ ][ ][ ][ ][ ][ ][ ]"."\n";
+        if($int===4) return "[x][x][R][x][ ][ ][ ][ ][ ][ ][ ]"."\n";
+        if($int===5) return "[x][x][R][x][x][ ][ ][ ][ ][ ][ ]"."\n";
+        if($int===6) return "[x][x][R][x][x][R][ ][ ][ ][ ][ ]"."\n";
+        if($int===7) return "[x][x][R][x][x][R][x][ ][ ][ ][ ]"."\n";
+        if($int===8) return "[x][x][R][x][x][R][x][x][ ][ ][ ]"."\n";
+        if($int===9) return "[x][x][R][x][x][R][x][x][R][ ][ ]"."\n";
+        if($int===10) return "[x][x][R][x][x][R][x][x][R][x][ ]"."\n";
+        if($int===11) return "[x][x][R][x][x][R][x][x][R][x][x]"."\n";
         return "[x][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]"."\n";
     }
 }
