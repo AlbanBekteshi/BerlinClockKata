@@ -82,4 +82,11 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[x][ ][ ][ ]\n[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]\n[ ][ ][ ][ ]",$actual);
     }
 
+    public function test_hour_2_shouldReturnRow3_2(){
+        $actual = $this->actTime("02:00:00");
+
+        $this->assertEquals("[x][x][ ][ ]\n[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]\n[ ][ ][ ][ ]",$actual);
+    }
+
+
 }

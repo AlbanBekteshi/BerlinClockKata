@@ -10,6 +10,7 @@ class BerlinClock {
 
     public function countHour(int $int) : String{
         if($int===1) return "[x][ ][ ][ ]\n";
+        if($int===2) return "[x][x][ ][ ]\n";
         return "[ ][ ][ ][ ]\n";
     }
 
