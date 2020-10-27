@@ -14,57 +14,55 @@ class BerlinClockTest extends TestCase
         $this->berlinClock= new BerlinClock();
     }
 
-    public function actTime(int $int):String{
-        return $this->berlinClock->countTime($int);
+    public function actTime(String $str):String{
+        return $this->berlinClock->countTime($str);
     }
 
     public function test_minute0_shouldReturn0(){
 
-        $actual = $this->actTime(0);
+        $actual = $this->actTime("00:00:00");
 
         $this->assertEquals("[ ][ ][ ][ ]",$actual);
     }
 
     public function test_minute1_shouldReturn1(){
 
-        $actual = $this->actTime(1);
+        $actual = $this->actTime("00:01:00");
 
         $this->assertEquals("[x][ ][ ][ ]",$actual);
     }
     public function test_minute2_shouldReturn2(){
 
-        $actual = $this->actTime(2);
+        $actual = $this->actTime("00:02:00");
 
         $this->assertEquals("[x][x][ ][ ]",$actual);
     }
 
     public function test_minute3_shouldReturn3(){
-        $actual = $this->actTime(3);
+        $actual = $this->actTime("00:03:00");
 
         $this->assertEquals("[x][x][x][ ]",$actual);
     }
 
     public function test_minute4_shouldReturn4(){
-        $actual = $this->actTime(4);
+        $actual = $this->actTime("00:04:00");
 
         $this->assertEquals("[x][x][x][x]",$actual);
     }
 
     public function test_minute5_shouldReturnRow2_1(){
-        $actual = $this->actTime(5);
+        $actual = $this->actTime("00:05:00");
 
         $this->assertEquals("[x][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]\n[ ][ ][ ][ ]",$actual);
     }
     public function test_minute6_shouldReturnRow2_1_Row1_1(){
-        $actual = $this->actTime(6);
+        $actual = $this->actTime("00:06:00");
 
         $this->assertEquals("[x][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]\n[x][ ][ ][ ]",$actual);
     }
     public function test_minute10_shouldReturnRow2_2(){
-        $actual = $this->actTime(10);
+        $actual = $this->actTime("00:10:00");
 
         $this->assertEquals("[x][x][ ][ ][ ][ ][ ][ ][ ][ ][ ]\n[ ][ ][ ][ ]",$actual);
     }
-
-
 }
