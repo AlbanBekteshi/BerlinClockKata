@@ -5,7 +5,12 @@ class BerlinClock {
     public function countTime(String $string): String{
         $tabTime = explode(":",$string);
 
-        return $this->countHour($tabTime[0]).$this->countMinute($tabTime[1]);
+        return $this->countSecond($tabTime[2]).$this->countHour($tabTime[0]).$this->countMinute($tabTime[1]);
+    }
+
+    public function countSecond(int $int) : String{
+        if($int%2===0) return "[x]\n";
+        return "[ ]\n";
     }
 
     public function countHour(int $int) : String{
